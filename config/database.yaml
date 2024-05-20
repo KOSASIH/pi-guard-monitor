@@ -1,0 +1,9 @@
+# pi-guard-monitor database configuration file
+
+database:
+  type: postgresql
+  host: localhost
+  port: 5432
+  name: pi-guard-monitor
+  user: pi-guard-monitor
+  password: pi-guard-monitor
