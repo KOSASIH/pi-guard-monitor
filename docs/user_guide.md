@@ -28,12 +28,13 @@ Build the Docker image:
 ```bash
 
 1. docker build -t pi-guard-monitor .
+```
 
 Run the Docker container:
 
 ```bash
 
-docker run -d -p 8000:8000 pi-guard-monitor
+1. docker run -d -p 8000:8000 pi-guard-monitor
 ```
 <a name="configuration"></a>
 
