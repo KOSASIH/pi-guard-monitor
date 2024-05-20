@@ -1,0 +1,57 @@
+# pi-guard-monitor configuration file
+
+# General configuration
+general:
+  name: pi-guard-monitor
+  version: 1.0.0
+  description: A security framework for protecting the Pi Network from malicious activities.
+
+# Logging configuration
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  handlers:
+    console:
+      class: logging.StreamHandler
+      level: INFO
+      formatter: default
+      stream: ext://sys.stdout
+    file:
+      class: logging.handlers.RotatingFileHandler
+      level: INFO
+      formatter: default
+      filename: pi-guard-monitor.log
+      maxBytes: 10485760
+      backupCount: 5
+
+# Database configuration
+database:
+  type: postgresql
+  host: localhost
+  port: 5432
+  name: pi-guard-monitor
+  user: pi-guard-monitor
+  password: pi-guard-monitor
+
+# Blockchain configuration
+blockchain:
+  network: mainnet
+  rpc_url: https://api.pi-chain.io
+  api_key: <YOUR_API_KEY>
+
+# Network configuration
+network:
+  interface: eth0
+  ip_address: <YOUR_IP_ADDRESS>
+  netmask: <YOUR_NETMASK>
+  gateway: <YOUR_GATEWAY>
+
+# Wallet configuration
+wallet:
+  path: /path/to/wallet
+  password: <YOUR_WALLET_PASSWORD>
+
+# Identity configuration
+identity:
+  path: /path/to/identity
+  password: <YOUR_IDENTITY_PASSWORD>
